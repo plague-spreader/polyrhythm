@@ -3,7 +3,7 @@
 [ $# -lt 3 ] && echo "Usage: $0 <BPM> <left> <right>" && exit 1
 
 dt=$(echo "60/$1" | bc -l)
-pulse=0.5
+pulse=0.1
 wait=$(echo 1-$pulse | bc -l)
 left_pulse=$(echo "$dt/$2*$pulse" | bc -l)
 left_wait=$(echo "$dt/$2*$wait" | bc -l)
